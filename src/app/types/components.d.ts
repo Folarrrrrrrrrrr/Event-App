@@ -6,6 +6,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   btnLabel: string;
   variant?: ButtonVariant;
   className?: string;
+  type?:string;
 }
 
 export interface heroProps extends React.ComponentProps{

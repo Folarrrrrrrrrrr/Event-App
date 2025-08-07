@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { ButtonProps } from '@/app/types/components';
 
@@ -8,10 +9,10 @@ const variants: Record<string, string> = {
   ghost: "text-gray-600 hover:underline",
 };
 const baseStyles = "px-4 py-2 rounded-md font-medium transition duration-200";
-const Button =({btnLabel, variant="primary", className="", ...rest }:ButtonProps)=>{
+const Button =({btnLabel, type,variant="primary", className="", ...rest }:ButtonProps)=>{
     
     return(
-        <button {...rest} className={`${variants[variant]} ${baseStyles} ${className}}`}>
+        <button {...rest} className={`${variants[variant]} ${baseStyles} ${className} ${type}}`}>
             {btnLabel}
         </button>
     )

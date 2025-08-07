@@ -1,5 +1,5 @@
 
-'use client';
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -52,7 +52,7 @@ const Services =()=>{
     ]
 
     return(
-       <section className="w-screen bg-gray-50 py-10 text-center">
+       <section id="services" className="w-screen bg-gray-50 py-10 text-center">
             <div className="w-full max-w-screen-2xl mx-auto px-4">
 
                 <div className="absolute flex ">
@@ -72,7 +72,7 @@ const Services =()=>{
                     />
                    
                 </div>
-                <h2 className="text-3xl font-serif font-semibold">OUR FORTE</h2>
+                <h2 className=" text-2xl md:text-4xl font-bold text-gray-900">OUR FORTE</h2>
                 <p className="mt-2 text-gray-500  justify-self-center  text-wrap  w-[40%]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                 </p>
@@ -129,12 +129,12 @@ const Services =()=>{
                     ))}
                 </div>
 
-                 <h2 className=" mt-12 text-3xl font-serif font-semibold">Explore our facilities</h2>
+                 <h2 className=" mt-12 text-2xl md:text-4xl font-bold text-gray-900">Explore our facilities</h2>
                 <p className="mt-2 text-gray-500">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                 </p>
 
-                <div className="mt-12 flex flex-wrap justify-center gap-6">
+                <div className="-mt-5 flex flex-wrap justify-center gap-6">
                     {facility.map((item, index) => (                        
                         <div
                             key={index}

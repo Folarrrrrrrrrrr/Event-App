@@ -1,16 +1,25 @@
-
+"use Client";
 import Button from "./Button";
 import { heroProps } from "../types/components";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import LazyVideo from "./LazyVideo";
+// import Link from "next/link";
  
 const Hero =({className}:heroProps)=>{ 
 
     return(        
-        <section className={`flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 relative overflow-hidden ${className}  min-w-screen sm:w-screen`}>
+        <section id="home" className={`flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 relative md:top-0 -top-10 overflow-hidden ${className} h-screen  min-w-screen sm:w-screen`}>
         
         {/* LEFT SIDE */}
         <div className="max-w-lg z-10">
+            <Image
+                src="/svg/CirclesTwo.svg" 
+                alt="Food"
+                width={500}
+                height={200}
+                className=" z-0 md:-z-[200000] rounded-lg object-fill absolute top-30 hidden md:block -left-10 animate-spin  w-[550px]"
+            />
            <h1 className="text-4xl md:text-3xl font-bold text-gray-900 leading-tight">
             We provide the best<br />
             <span className="text-gray-900 md:text-4xl"> Food and Ambience</span>
@@ -20,20 +29,21 @@ const Hero =({className}:heroProps)=>{
             </p>
 
             <div className="flex gap-4 mt-6">
-            <Button 
-            btnLabel="Request a Call"
-            variant="secondary"
-            className=" hover:rounded-tl-2xl hover:rounded-br-2xl cursor-pointer"
-            />
-            <Button 
-            btnLabel="Book Inspection"
-            variant="primary"
-            className=" hover:rounded-tr-2xl hover:rounded-bl-2xl  cursor-pointer"
-            />
-
-
-            
-            
+                <a href='#contact'>
+                    <Button 
+                    btnLabel="Request a Call"
+                    variant="secondary"
+                    className="z-99999 hover:rounded-tl-2xl hover:rounded-br-2xl cursor-pointer"
+                    />
+                </a>
+                
+                <a href='#contact'>
+                    <Button 
+                    btnLabel="Book Inspection"
+                    variant="primary"
+                    className=" z-9999999 hover:rounded-tr-2xl hover:rounded-bl-2xl  cursor-pointer"
+                    />
+                </a>
             </div>
 
             {/* Social Icons */}
@@ -54,12 +64,17 @@ const Hero =({className}:heroProps)=>{
         <div className="relative mt-12 lg:mt-0 w-full max-w-xl">
             {/* Background Image (Ambience) */}
             <div className="rounded-2xl hidden md:block overflow-hidden ml-45">
-            <Image
+            {/* <Image
                 src="/svg/homeEventDecor.svg" 
                 alt="Ambience"
                 width={300}
                 height={350}
                 className="rounded-xl object-cover"
+            /> */}
+             <LazyVideo
+                src="https://res.cloudinary.com/drsh6mbvo/video/upload/v1754092147/Best_nyfopd.mp4"
+                poster="/images/hero-thumbnail.jpg" // optional
+                className="max-w-3xl mx-auto max-h-[70%]"
             />
             </div>
 
