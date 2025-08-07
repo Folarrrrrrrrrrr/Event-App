@@ -3,33 +3,15 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { useForm } from 'react-hook-form';
+// import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import Button from './Button';
+import Image from 'next/image';
 
-const ContactSection = () => {
-const [date, setDate] = useState<Date | null>(new Date());
+const Contact = () => {
+  const [date, setDate] = useState<Date | null>(new Date());
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm();
-
-  const onSubmit = async (data: any) => {
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' },
-      });
-      const result = await res.json();
-      alert(result.message || 'Message sent!');
-    } catch (err) {
-      alert('Failed to send message.');
-    }
-  };
-
+  
   return (
     <section id='contact' className="w-screen bg-white mt-20 px-4 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -131,11 +113,14 @@ const [date, setDate] = useState<Date | null>(new Date());
 
           {/* Newsletter */}
           <div className="relative rounded-xl overflow-hidden h-40 md:h-[310px]">
-            <img
+            <Image
+              fill
               src="/svg/Subscribe.svg"
               alt="Newsletter Background"
               className="absolute w-full h-full object-cover"
+           
             />
+           
             <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4">
               <h4 className="text-white text-lg font-semibold mb-2">
                 Subscribing To our Newsletter
@@ -158,5 +143,5 @@ const [date, setDate] = useState<Date | null>(new Date());
   );
 };
 
-export default ContactSection;
+export default Contact;
 

@@ -40,7 +40,7 @@ export default function TestimonialSection() {
       title="Our Happy Customers"
       className='md:-mt-15'
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      renderSlide={(item, index) => (
+      renderSlide={(item) => (
         <div className="bg-white shadow-xl rounded-2xl p-4 text-left h-full">
           <div className="flex items-center space-x-4 mb-4">
             <Image

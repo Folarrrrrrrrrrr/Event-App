@@ -1,15 +1,18 @@
-// "use client" ;
-import Hero from"@/app/components/Hero"
+"use client" ;
+// import Home from"@/app/components/Home"
 import Services from "./components/Services";
+import HomePage from "./components/HomePage";
 import Gallery from "./components/Gallery";
-import ContactSection from "./components/Contact";
+import Contact from "./components/Contact";
 export default function Home() {
   return (
     <div className="items-center justify-items-center min-w-screen min-h-screen p-20 pb-5  sm:p-10 font-[family-name:var(--font-geist-sans)]">
-      <Hero className=""/>
+      {/* <Home /> */}
+      {/* <Home/> */}
+      <HomePage className=""/>
       <Services/>
       <Gallery/>
-      <ContactSection/>
+      <Contact/>
     </div>
   );
 }

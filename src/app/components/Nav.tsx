@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi"; // For hamburger and close icons
 
 const Nav = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("");
 
   const navItems = [

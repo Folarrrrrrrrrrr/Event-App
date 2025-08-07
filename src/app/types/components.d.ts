@@ -9,6 +9,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   type?:string;
 }
 
-export interface heroProps extends React.ComponentProps{
+export interface homeProps extends React.ComponentProps{
   className: string;
 }; 

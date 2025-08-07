@@ -1,12 +1,12 @@
 "use Client";
 import Button from "./Button";
-import { heroProps } from "../types/components";
+import { homeProps } from "../types/components";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import LazyVideo from "./LazyVideo";
 // import Link from "next/link";
  
-const Hero =({className}:heroProps)=>{ 
+const HomePage =({className}:homeProps)=>{ 
 
     return(        
         <section id="home" className={`flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 relative md:top-0 -top-10 overflow-hidden ${className} h-screen  min-w-screen sm:w-screen`}>
@@ -73,7 +73,7 @@ const Hero =({className}:heroProps)=>{
             /> */}
              <LazyVideo
                 src="https://res.cloudinary.com/drsh6mbvo/video/upload/v1754092147/Best_nyfopd.mp4"
-                poster="/images/hero-thumbnail.jpg" // optional
+                poster="" // optional
                 className="max-w-3xl mx-auto max-h-[70%]"
             />
             </div>
@@ -113,4 +113,4 @@ const Hero =({className}:heroProps)=>{
     )
 }
 
-export default Hero
+export default HomePage
