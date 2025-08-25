@@ -12,7 +12,7 @@ const items = [
 
 export default function ExpertChef() {
   return (
-    <section className="py-2 bg-white">
+    <section className="py-2 bg-white  max-h-[60vh] md:max-h-[50vh]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 gap-12">
         {/* Left Content */}
         <div className="flex-1">
@@ -38,19 +38,21 @@ export default function ExpertChef() {
         </div>
 
         {/* Right Image */}
-        <div className="flex-1 relative w-full max-w-md">
-          <div className="w-[280px] h-[280px] md:w-[240px] md:h-[240px] overflow-hidden bg-orange-500 rounded-full mx-auto relative">
+        <div className="flex-1 relative -top-20 md:-top-0 w-full max-w-md">
+          <div className="w-[280px] h-[280px] md:w-[240px] md:h-[240px] z-99 overflow-hidden md:bg-orange-500 bg-gray-50 rounded-[50px] md:rounded-full mx-auto relative">
             <Image
               src="/jpg/folaTransparent.png" // 🔁 Replace with actual path
               alt="Expert Chef"
             //   fill
             width={300}
             height={150}
-            className="object-cover h-[370px] relative -top-[90px] "
+            className="object-cover h-[370px] relative -top-[55px] md:-top-[80px] hover:scale-125 ease-in-out transition "
             />
           </div>
         </div>
       </div>
+      <Image src='/svg/FryingPan.svg' alt='' width={300} height={200} className=' relative  -top-[630px] md:-top-70 md:left-10'/>
+
     </section>
   );
 }

@@ -13,7 +13,7 @@ const Contact = () => {
 
   
   return (
-    <section id='contact' className="w-screen bg-white mt-20 px-4 py-10">
+    <section id='contact' className=" absolute w-screen bg-white mt-20 px-4 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Map + Calendar */}
         <motion.div

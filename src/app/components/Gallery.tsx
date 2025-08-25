@@ -62,7 +62,7 @@ const Gallery =()=>{
 
   return(
 
-    <section id="gallery" className="w-screen md:flex h-full py-15">
+    <section id="gallery" className=" w-screen md:flex mdmax-h-screen md:py-15">
          {/* Gallery section (left) */}
         <Slider
           items={products}
@@ -73,7 +73,7 @@ const Gallery =()=>{
                 alt={`Image ${i}`}
                 width={500}
                 height={200}
-                className="rounded-xl object-cover min-w-full min-h-[700px]  md:min-h-[500px] hover:scale-125 transition-all ease-in-out"
+                className="rounded-xl object-cover min-w-full min-h-[85vh]  md:min-h-[70vh] hover:scale-125 transition-all ease-in-out"
             />
           )}
           // title="Gallery"
@@ -81,12 +81,11 @@ const Gallery =()=>{
           imageContainer=""
           swipeItem=""
         />
-        <div >
+        <div className="">
           <ExpertChef/>
           <TestimonialSection
           />
         </div>
-
     </section>
 
   )

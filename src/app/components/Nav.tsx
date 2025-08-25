@@ -21,7 +21,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md px-6 py-4 flex justify-between h-[60px] items-center">
+    <nav className="fixed top-0 z-50000 bg-white shadow-md px-6 py-4 flex justify-between w-screen h-[60px] items-center z-">
       {/* Brand Logo */}
       <a href='#' >
         <Image src="/fullLogo.svg" width={100} height={100} alt="brand logo"  className="cursor-pointer"/>
@@ -55,7 +55,7 @@ const Nav = () => {
 
       {/* Mobile Menu Drawer */}
       {mobileOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md py-4 z-40">
+        <div className="absolute top-14 left-0 w-full bg-white shadow-md py-4 z-40  text-center">
           {navItems.map(({ label, href }) => (
             <a
               key={href}
@@ -69,8 +69,8 @@ const Nav = () => {
               {label}
             </a>
           ))}
-          <a href='#contact'>
-            <Button btnLabel="Book a Date" variant="primary" className="w-full" />
+          <a href='#contact' >
+            <Button btnLabel="Book a Date" variant="primary" className="w-[50%] self-center-safe  " />
           </a >
         </div>
       )}
